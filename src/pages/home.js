@@ -13,9 +13,10 @@ export default class Home extends PureComponent {
             <div class="title-text">Lloyd.
               <div class="text-block"></div>
             </div>
+            <div class="subtitle-text">Director & Photographer.</div>
           </div>
           <div class="image-box">
-            <div class="title-image">
+            <div class="image-image">
               <img src={Lloyd} alt="LLoyd"></img>
               <div class="image-block"></div>
             </div>
