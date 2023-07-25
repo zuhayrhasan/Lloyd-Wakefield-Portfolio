@@ -58,43 +58,53 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div class="row"><div class="column">
-          <Image person={"Malin"} occasion={"Lidingö"} imageSrc={Pic1} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} />
-          <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic3} />
-          <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic4} />
-          <Image person={"Harry Styles"} occasion={"Love On Tour"} imageSrc={Pic5} />
-          <Image person={"Charlotte Jane"} occasion={"Salford"} imageSrc={Pic6} />
-        </div>
 
-        <div class="column">
-          <Image person={"Val Mercado"} occasion={"Philipp Plein"} imageSrc={Pic7} />
-          <Image person={"Harry Styles"} occasion={"Brixton ONO"} imageSrc={Pic8} />
-          <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic9} />
-          <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic10} />
-          <Image person={"Amelia"} occasion={"Stockholm"} imageSrc={Pic11} />
-          <Image person={"Tom"} occasion={"Contact"} imageSrc={Pic12} />
-        </div>
+        <div class="pictures-container">
 
-        <div class="column">
-          <Image person={"Archive"} occasion={"Lidingö"} imageSrc={Pic13} />
-          <Image person={"Nazaré"} occasion={"Portugal"} imageSrc={Pic14} />
-          <Image person={"Maja Lindelöf"} occasion={"Edbald"} imageSrc={Pic15} />
-          <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic16} />
-          <Image person={"Alcobaça"} occasion={"Portugal"} imageSrc={Pic17} />
-          <Image person={"Meredith Mickelson"} occasion={"Milan"} imageSrc={Pic18} />
-        </div>
+          <div class="column">
+            <Image person={"Malin"} occasion={"Lidingö"} imageSrc={Pic1} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} />
+            <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic3} />
+            <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic4} />
+            <Image person={"Harry Styles"} occasion={"Love On Tour"} imageSrc={Pic5} />
+            <Image person={"Charlotte Jane"} occasion={"Salford"} imageSrc={Pic6} />
+          </div>
 
-        <div class="column">
-          <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic19} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic3} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic4} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic5} />
-          <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic6} />
+          <div class="column">
+            <Image person={"Val Mercado"} occasion={"Philipp Plein"} imageSrc={Pic7} />
+            <Image person={"Harry Styles"} occasion={"Brixton ONO"} imageSrc={Pic8} />
+            <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic9} />
+            <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic10} />
+            <Image person={"Amelia"} occasion={"Stockholm"} imageSrc={Pic11} />
+            <Image person={"Tom"} occasion={"Contact"} imageSrc={Pic12} />
+          </div>
+
+          <div class="column">
+            <Image person={"Archive"} occasion={"Lidingö"} imageSrc={Pic13} />
+            <Image person={"Nazaré"} occasion={"Portugal"} imageSrc={Pic14} />
+            <Image person={"Maja Lindelöf"} occasion={"Edbald"} imageSrc={Pic15} />
+            <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic16} />
+            <Image person={"Alcobaça"} occasion={"Portugal"} imageSrc={Pic17} />
+            <Image person={"Meredith Mickelson"} occasion={"Milan"} imageSrc={Pic18} />
+          </div>
+
+          <div class="column">
+            <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic19} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic3} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic4} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic5} />
+            <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic6} />
           </div>
 
         </div>
+
+        <div class="contact-container">
+
+        </div>
+        <footer class="foot">
+          <div class="gradient"></div>
+        </footer>
       </>
     );
 }

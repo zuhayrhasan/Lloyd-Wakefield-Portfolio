@@ -2,7 +2,6 @@
     --primary: #ffb3bf;
     --dark: #b37d8b;
     --light: #ffecf1;
-    --faint: #ffecf1;
     --white: #ffffff;
     --grey: #848484;
     --lightgrey: #bcbcbc;
@@ -12,6 +11,7 @@
 .landing-container {
     display: flex;
     height: 100vh;
+    background-image: linear-gradient(to top, var(--white), var(--light));
 }
 
 .title-box {
@@ -64,7 +64,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light);
 }
 
 .image-image {
@@ -105,15 +104,14 @@
     right: -10% !important;
 }
 
-.row {
-    display: -ms-flexbox; /* IE 10 */
+.pictures-container {
+    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap; /* IE 10 */
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 4px;
 }
 
-/* Create two equal columns that sits next to each other */
 .column {
     -ms-flex: 25%;
     flex: 24%; /* Not 25% because 4 0.5% padding */
@@ -177,6 +175,22 @@
 
 .column-image:hover .blur > div {
     opacity: 1;
+}
+
+.contact-container {
+    display: flex;
+    height: 100svh;
+    background-image: linear-gradient(to bottom, var(--white), var(--light));
+}
+
+.foot {
+    height: 50svh;
+    background-color: var(--primary);
+}
+
+.gradient {
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--light), var(--primary));
 }
   
 
