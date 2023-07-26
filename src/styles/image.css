@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     margin-top: 4%;
+    margin-bottom: 4%;
 }
 
 .column-image img {
@@ -50,6 +51,10 @@
     font-style: italic;
 }
 
+.column-image:hover {
+    cursor: zoom-in;
+}
+
 .column-image:hover .blur {
     height: 40%;
 }
@@ -57,9 +62,6 @@
 .column-image:hover .blur > div {
     opacity: 1;
 }
-
-
-/* Modal Styles */
 
 .modal-overlay {
     position: fixed;
@@ -94,6 +96,7 @@
     position: absolute;
     bottom: 0;
     backdrop-filter: blur(10px) brightness(0.8);
+    background-color: transparent;
     color: var(--white);
     padding: 10px;
     width: 100%;
