@@ -184,8 +184,30 @@ const Home = () => {
 
               </div>
             </div>
-            <div class="contact-me">
+            <div class="contact-me-side">
+              <div class="contact-me-container">
+                <h3 class="black-text text-underline">
+                  Send me a Message
+                  <div class="underline-block"></div>
+                </h3>
+                <form class="contact-me-form darkgrey-text">
+                  <label for="to">To:</label>
+                  <input type="text" id="to" name="to" value="LLoyd Wakefield" readonly/>
 
+                  <label for="from">From:</label>
+                  <input type="text" id="from" name="from" required/>
+
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+
+                  <button type="submit">
+                    <span class="button-content">
+                      Send Message
+                    </span>
+                  </button>
+                  
+                </form>
+              </div>
             </div>
           </div>
 
