@@ -190,15 +190,15 @@ const Home = () => {
                   Send me a Message
                   <div class="underline-block"></div>
                 </h3>
-                <form class="contact-me-form darkgrey-text">
+                <form action="mailto:zuhayrshasan@gmail.com" method="post" enctype="text/plain" class="contact-me-form darkgrey-text">
                   <label for="to">To:</label>
                   <input type="text" id="to" name="to" value="LLoyd Wakefield" readonly/>
 
                   <label for="from">From:</label>
-                  <input type="text" id="from" name="from" required/>
+                  <input type="text" id="from" name="from" placeholder="example@gmail.com" required/>
 
                   <label for="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea>
+                  <textarea id="message" name="message" placeholder="Where did you learn to be so cool?" required></textarea>
 
                   <button type="submit">
                     <span class="button-content">

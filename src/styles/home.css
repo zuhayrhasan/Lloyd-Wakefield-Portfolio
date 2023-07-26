@@ -3,6 +3,7 @@
     --dark: #b37d8b;
     --light: #ffecf1;
     --white: #ffffff;
+    --verylightgrey: #e2e2e2;
     --grey: #848484;
     --lightgrey: #bcbcbc;
     --darkgrey: #4c4c4c;
@@ -45,6 +46,25 @@ h6 {
     font-weight: 100;
     margin-block-start: 0%;
     margin-block-end: 0%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light); 
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink); 
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark); 
+    border-radius: 100px;
 }
 
 .bold {
@@ -268,7 +288,7 @@ h6 {
     width: 50px;
     height: 50px;
     padding: 0 25px;
-    filter: grayscale(100%);
+    filter: brightness(0);
     transition: all 0.3s ease-in-out;
 }
 
@@ -312,8 +332,8 @@ h6 {
     align-items: center;
     width: 70%;
     height: fit-content;
-    margin: 20px auto;
-    padding: 20px;
+    max-height: 100%;
+    padding: 1rem;
     border-radius: 30px;
     background: var(--white);
     box-shadow:  15px 15px 45px var(--lightgrey),
@@ -329,22 +349,59 @@ h6 {
     margin-block-start: 5%;
 }
   
-  .contact-me-form label,
-  .contact-me-form input,
-  .contact-me-form textarea {
+
+.contact-me-form input,
+.contact-me-form textarea {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
+    color: var(--black);
+    border: none;
+    background-color: var(--verylightgrey);
+    border-radius: 5px;
+    padding: 1rem;
+    max-height: 50%;
+    height: 2rem;
+    box-sizing: border-box;
+    transition: outline-offset 0.25s ease-in-out;
+}
+
+.contact-me-form input:focus,
+.contact-me-form textarea:focus {
+    outline: 2px solid var(--pink);
+    outline-offset: 3px;
+}
+
+.contact-me-form input::placeholder,
+.contact-me-form textarea::placeholder {
+    color: var(--lightgrey);
+}
+
+.contact-me-form input:focus::placeholder,
+.contact-me-form textarea:focus::placeholder {
+    color: transparent;
+}
+
+.contact-me-form label,
+.contact-me-form input,
+.contact-me-form textarea {
     text-align: left;
     display: block;
     width: 100%;
-  }
+    min-width: 100%;
+    max-width: 100%;
+}
 
-  .contact-me-form input {
-    margin-bottom: 10px;
-  }
 
-  .contact-me-form textarea {
-    height: 150px;
+.contact-me-form textarea {
+    height: 100px;
+    min-height: 2.2rem;
+    max-height: 200px;
     margin-bottom: 20px;
-  }
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    border-bottom-right-radius: 0px;
+}
 
 .contact-me-form button {
     position: relative;
@@ -362,10 +419,10 @@ h6 {
     transition: all 0.5s ease-in-out;
 }
 
-  .contact-me-form button-content {
+.contact-me-form button-content {
     position: relative;
     z-index: 1;
-  }
+}
   
 .contact-me-form button:hover {
     background: var(--dark);
