@@ -190,7 +190,7 @@ const Home = () => {
                   Send me a Message
                   <div class="underline-block"></div>
                 </h3>
-                <form action="mailto:zuhayrshasan@gmail.com" method="post" enctype="text/plain" class="contact-me-form darkgrey-text">
+                <form action="mailto:test@gmail.com" method="post" enctype="text/plain" class="contact-me-form darkgrey-text">
                   <label for="to">To:</label>
                   <input type="text" id="to" name="to" value="LLoyd Wakefield" readonly/>
 
