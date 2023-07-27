@@ -133,7 +133,7 @@ h6 {
     color: var(--darkgrey);
 }
 
-.title-box {
+.title-side {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -178,7 +178,7 @@ h6 {
     transition: opacity 2s ease-in-out;
 }
 
-.image-box {
+.image-side {
     flex: 1;
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@ h6 {
     padding: 0 0.5%;
 }
 
-.video-container {
+.cinematography-container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -479,10 +479,16 @@ h6 {
         flex-direction: column;
     }
 
+    .title-side {
+        flex: 0.6;
+    }
+
     .image-image {
         justify-content: center;
         align-items: center;
+        top: -5rem;
     }
+    
 
     .title-text {
         font-size: clamp(5rem, 1.6531rem + 19.4726vw, 11rem);
