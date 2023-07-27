@@ -30,7 +30,28 @@ import Pic19 from '../images/19.jpg';
 import Insta from '../images/Insta.png';
 import Twitter from '../images/Twitter.png';
 
-const Home = () => {
+
+const Home = () => {  
+
+  
+    /*
+    const SECTION_IDS = {
+      SECTION_1: "test 1",
+      SECTION_2: "test 2",
+      SECTION_3: "test 3",
+      SECTION_4: "test 4",
+    };
+
+    function exportSectionIds() {
+      SECTION_IDS.SECTION_1 = document.getElementById("landing-section").offsetTop;
+      SECTION_IDS.SECTION_2 = document.getElementById("photography-section").offsetTop;
+      SECTION_IDS.SECTION_3 = document.getElementById("cinematography-section").offsetTop;
+      SECTION_IDS.SECTION_4 = document.getElementById("contact-section").offsetTop;
+    } 
+
+    document.addEventListener('DOMContentLoaded', exportSectionIds);
+
+    */
 
     window.addEventListener("load", function() {
       // Get the .title-text element
@@ -96,39 +117,36 @@ const Home = () => {
                 <Image person={"Malin"} occasion={"Lidingö"} imageSrc={Pic1} id={"1"} />
                 <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} id={"2"} />
                 <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic3} id={"3"} />
-                <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic4} id={"4"} />
+                
+                <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic16} id={"16"} />
                 <Image person={"Harry Styles"} occasion={"Love On Tour"} imageSrc={Pic5} id={"5"} />
-                <Image person={"Charlotte Jane"} occasion={"Salford"} imageSrc={Pic6} id={"6"} />
               </div>
 
               {/* Second Column */}
               <div class="column">
+                <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic10} id={"10"} />
                 <Image person={"Val Mercado"} occasion={"Philipp Plein"} imageSrc={Pic7} id={"7"} />
                 <Image person={"Harry Styles"} occasion={"Brixton ONO"} imageSrc={Pic8} id={"8"} />
                 <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic9} id={"9"} />
-                <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic10} id={"10"} />
                 <Image person={"Amelia"} occasion={"Stockholm"} imageSrc={Pic11} id={"11"} />
-                <Image person={"Tom"} occasion={"Contact"} imageSrc={Pic12} id={"12"} />
               </div>
 
               {/* Third Column */}
               <div class="column">
+                <Image person={"Charlotte Jane"} occasion={"Salford"} imageSrc={Pic6} id={"6"} />
+                <Image person={"Tom"} occasion={"Contact"} imageSrc={Pic12} id={"12"} />
                 <Image person={"Archive"} occasion={"Lidingö"} imageSrc={Pic13} id={"13"} />
-                <Image person={"Nazaré"} occasion={"Portugal"} imageSrc={Pic14} id={"14"} />
+                <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic19} id={"19"} />
                 <Image person={"Maja Lindelöf"} occasion={"Edbald"} imageSrc={Pic15} id={"15"}/>
-                <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic16} id={"16"} />
-                <Image person={"Alcobaça"} occasion={"Portugal"} imageSrc={Pic17} id={"17"} />
-                <Image person={"Meredith Mickelson"} occasion={"Milan"} imageSrc={Pic18} id={"18"} />
               </div>
 
               {/* Fourth Column */}
               <div class="column">
-                <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic19} id={"19"} />
+                <Image person={"Harry Styles"} occasion={"As It Was"} imageSrc={Pic4} id={"4"} />
+                <Image person={"Alcobaça"} occasion={"Portugal"} imageSrc={Pic17} id={"17"} />
+                <Image person={"Meredith Mickelson"} occasion={"Milan"} imageSrc={Pic18} id={"18"} />
+                <Image person={"Nazaré"} occasion={"Portugal"} imageSrc={Pic14} id={"14"} />
                 <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} id={"20"} />
-                <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic3} id={"21"} />
-                <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic4} id={"22"} />
-                <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic5} id={"23"} />
-                <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic6} id={"24"} />
               </div>
 
             </div>
@@ -225,16 +243,16 @@ const Home = () => {
                   </h3>
 
                   <form target="_blank" action="https://formsubmit.co/lloyd@gmail.com" method="POST" class="contact-me-form darkgrey-text">
-                    <label for="to">To:</label>
-                    <input type="text" id="to" name="to" value="LLoyd Wakefield" readonly/>
+                    <label photos_section="to">To:</label>
+                    <input type="text" id="to" name="to" value="LLoyd Wakefield" readOnly/>
 
-                    <label for="name">From:</label>
+                    <label photos_section="name">From:</label>
                     <input type="text" id="from" name="name" placeholder="First Last" required/>
 
-                    <label for="email">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="example@gmail.com" required/>
 
-                    <label for="message">Message:</label>
+                    <label photos_section="message">Message:</label>
                     <textarea id="message" name="message" placeholder="Where did you learn to be so cool?" required></textarea>
 
                     <button type="submit">
