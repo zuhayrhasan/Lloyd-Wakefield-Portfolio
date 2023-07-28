@@ -34,7 +34,8 @@ import Twitter from '../images/Twitter.png';
 const Home = () => {  
 
   
-    /*
+    /*start
+
     const SECTION_IDS = {
       SECTION_1: "test 1",
       SECTION_2: "test 2",
@@ -75,7 +76,7 @@ const Home = () => {
         <main>
 
           {/* Landing Section */}  
-          <section id="landing-section">
+          <section id="home">
               
             <div class="landing-container">
 
