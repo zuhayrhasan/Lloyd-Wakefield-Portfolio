@@ -41,11 +41,11 @@ class NavBar extends Component {
 
     const fullHeight = document.documentElement.offsetHeight;
     const svh = document.documentElement.clientHeight;
-    const footer = svh*0.5;
-    const safety = svh*0.5;
+    const footer = svh*0.6;
+    const safety = svh*1;
 
-    const photosPos = svh-safety;
-    const cinemaPos = fullHeight-svh*2.5-footer-safety;
+    const photosPos = svh*1.5-safety;
+    const cinemaPos = fullHeight-svh*2.4-footer-safety;
     const contactPos = fullHeight-svh*1.5-footer-safety;
 
     const glider = document.querySelector('.glider');

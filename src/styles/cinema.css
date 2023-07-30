@@ -41,13 +41,6 @@
 
 @media (max-width: 768px) {
 
-    .cinematography-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        height: 70svh;
-    }
-
     .video-wrapper {
         margin-left: 5%;
         width: 90%;
