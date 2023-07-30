@@ -1,0 +1,211 @@
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 90svh;
+    background-image: linear-gradient(to bottom, var(--white), var(--light));
+}
+
+.about-me-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    transform: translateX(10%);
+}
+
+.info-container {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials img {
+    width: 50px;
+    height: 50px;
+    padding: 0 25px;
+    filter: brightness(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.socials img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+.references-container {
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sorted-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sorted-items span {
+    flex: 0 0px 50%;
+    width: fit-content;
+}
+
+.contact-me-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-me-container {
+    top: 0;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: fit-content;
+    max-height: 100%;
+    padding: 1rem;
+    border-radius: 30px;
+    background: var(--white);
+    box-shadow:  15px 15px 45px var(--lightgrey),
+                 -15px -15px 45px var(--white);
+    z-index: 1;
+}
+
+.contact-me-form {
+    width: 100%;
+}
+
+.contact-me-container h3 {
+    text-align: center;
+    margin-block-start: 5%;
+}
+  
+.contact-me-form input,
+.contact-me-form textarea {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
+    color: var(--black);
+    border: none;
+    background-color: var(--verylightgrey);
+    border-radius: 5px;
+    padding: 1rem;
+    max-height: 50%;
+    height: 2rem;
+    box-sizing: border-box;
+    transition: outline-offset 0.25s ease-in-out;
+}
+
+.contact-me-form input:focus,
+.contact-me-form textarea:focus {
+    outline: 2px solid var(--pink);
+    outline-offset: 3px;
+}
+
+.contact-me-form input::placeholder,
+.contact-me-form textarea::placeholder {
+    color: var(--lightgrey);
+}
+
+.contact-me-form input:focus::placeholder,
+.contact-me-form textarea:focus::placeholder {
+    color: transparent;
+}
+
+.contact-me-form label,
+.contact-me-form input,
+.contact-me-form textarea {
+    text-align: left;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.contact-me-form textarea {
+    height: 100px;
+    min-height: 2.2rem;
+    max-height: 150px;
+    margin-bottom: 20px;
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    border-bottom-right-radius: 0px;
+}
+
+.contact-me-form button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--pink);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--pink);
+}
+
+.contact-me-form button:hover {
+    color: var(--white);
+    box-shadow: inset 0 -100px 0 0 var(--pink);
+}
+
+.contact-me-form button:active {
+    transform: scale(0.9);
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 190svh;
+        background-image: linear-gradient(to bottom, var(--white), var(--light));
+    }
+
+    .about-me-container {
+        transform: none;
+    }
+
+    .contact-me-container {
+        transform: none;
+    }
+
+    .info-container {
+        height: 60%;
+    }
+    
+    .references-container {
+        height: 45%;
+    }
+
+}

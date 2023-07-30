@@ -1,0 +1,132 @@
+
+
+footer {
+    position: relative;
+    height: 60svh;
+    color: var(--black);
+    background-image: linear-gradient(to bottom, var(--light), var(--pink));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h1 {
+    padding: 0;
+    margin: 0;
+}
+
+footer h6 {
+    font-size: 13px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+  
+footer li {
+    margin: 0 10px;
+}
+  
+footer li a {
+    text-decoration: none;
+    color: var(--blacks);
+    padding: 0 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer li a:hover {
+    background-color: var(--pink);
+    color: var(--light);
+}
+
+.footer-text {
+    position: absolute;
+    top: 15svh;
+    text-align: center;
+}
+
+.footer-socials img {
+    width: 35px;
+    height: 35px;
+    padding: 0 25px;
+    filter: brightness(0);
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 5px;
+}
+
+.footer-socials img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    
+    footer {
+        position: relative;
+        height: 60svh;
+        color: var(--black);
+        background-image: linear-gradient(to bottom, var(--light), var(--pink));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer h1 {
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer h6 {
+        font-size: 13px;
+    }
+    
+    footer ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        transform: scale(0.9);
+    }
+      
+    footer li {
+        margin: 0px -5px;
+    }
+      
+    footer li a {
+        text-decoration: none;
+        color: var(--blacks);
+        padding: 0 10px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    footer li a:hover {
+        background-color: var(--pink);
+        color: var(--light);
+    }
+    
+    .footer-text {
+        position: absolute;
+        top: 15svh;
+        text-align: center;
+    }
+    
+    .footer-socials img {
+        width: 20px;
+        height: 20px;
+        padding: 0 15px;
+        filter: brightness(0);
+        transition: all 0.3s ease-in-out;
+        padding-bottom: 5px;
+    }
+    
+    .footer-socials img:hover {
+        filter: none;
+        transform: scale(1.1);
+    }
+
+}

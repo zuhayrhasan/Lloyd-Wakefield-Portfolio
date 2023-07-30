@@ -1,5 +1,9 @@
 import React from 'react';
 import '../styles/home.css';
+import '../styles/photos.css';
+import '../styles/cinema.css';
+import '../styles/contact.css';
+import '../styles/footer.css';
 
 // Components
 import Image from '../components/image.js';
@@ -27,33 +31,12 @@ import Pic17 from '../images/photos/17.jpg';
 import Pic18 from '../images/photos/18.jpg';
 import Pic19 from '../images/photos/19.jpg';
 
+// Icons
 import Insta from '../images/logos/Insta.png';
 import Twitter from '../images/logos/Twitter.png';
 import Email from '../images/logos/Email.png';
 
-
 const Home = () => {  
-
-  
-    /*start
-
-    const SECTION_IDS = {
-      SECTION_1: "test 1",
-      SECTION_2: "test 2",
-      SECTION_3: "test 3",
-      SECTION_4: "test 4",
-    };
-
-    function exportSectionIds() {
-      SECTION_IDS.SECTION_1 = document.getElementById("landing-section").offsetTop;
-      SECTION_IDS.SECTION_2 = document.getElementById("photography-section").offsetTop;
-      SECTION_IDS.SECTION_3 = document.getElementById("cinematography-section").offsetTop;
-      SECTION_IDS.SECTION_4 = document.getElementById("contact-section").offsetTop;
-    } 
-
-    document.addEventListener('DOMContentLoaded', exportSectionIds);
-
-    */
 
     window.addEventListener("load", function() {
       // Get the .title-text element
@@ -169,28 +152,28 @@ const Home = () => {
               <div class="video-wrapper">
                 <div class="video-container">
                   <div class="video-item">
-                    <iframe title="Harry Styles - As It Was BTS on Vimeo" class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" allowfullscreen></iframe>
+                    <iframe title="Harry Styles - As It Was BTS on Vimeo" class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="J Appiah - WYHG on Vimeo" class="video" src="https://player.vimeo.com/video/655186707" allowfullscreen></iframe>
+                    <iframe title="J Appiah - WYHG on Vimeo" class="video" src="https://player.vimeo.com/video/655186707" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Manc Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" allowfullscreen></iframe>
+                    <iframe title="Manc Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Flowers - A Fashion Film on Vimeo" class="video" src="https://player.vimeo.com/video/563294878" allowfullscreen></iframe>
+                    <iframe title="Flowers - A Fashion Film on Vimeo" class="video" src="https://player.vimeo.com/video/563294878" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Glas Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" allowfullscreen></iframe>
+                    <iframe title="Glas Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Phillip Plein NY on Vimeo" class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" allowfullscreen></iframe>
+                    <iframe title="Phillip Plein NY on Vimeo" class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Phillip Plein 2020 on Vimeo" class="video" src="https://player.vimeo.com/video/555627555?h=c81a24d855" allowfullscreen></iframe>
+                    <iframe title="Phillip Plein 2020 on Vimeo" class="video" src="https://player.vimeo.com/video/555627555?h=c81a24d855" allowfullscreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Raw Sport X Richard Riakporhe on Vimeo" class="video" src="https://player.vimeo.com/video/390816444" allowfullscreen></iframe>
+                    <iframe title="Raw Sport X Richard Riakporhe on Vimeo" class="video" src="https://player.vimeo.com/video/390816444" allowfullscreen="true"></iframe>
                   </div>
                 </div>
               </div>
