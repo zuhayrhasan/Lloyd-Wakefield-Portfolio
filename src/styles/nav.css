@@ -118,22 +118,27 @@
         width: 25px; /* Adjust the dimensions of your logo */
         height: 25px; /* Replace with your Photos logo image */
         background-size: cover;
+        filter: brightness(0.5) invert(0.5);
     }
     
     .nav-list .option[href="#home"]:before {
-        background-image: url('../images/HomeIcon.png');
+        background-image: url('../images/icons/HomeIcon.png');
     }
 
     .nav-list .option[href="#photography-section"]:before {
-        background-image: url('../images/PhotoIcon.png');
+        background-image: url('../images/icons/PhotoIcon.png');
     }
 
     .nav-list .option[href="#cinematography-section"]:before {
-        background-image: url('../images/VideoIcon.png');
+        background-image: url('../images/icons/VideoIcon.png');
     }
 
     .nav-list .option[href="#contact-section"]:before {
-        background-image: url('../images/ContactIcon.png');
+        background-image: url('../images/icons/ContactIcon.png');
+    }
+
+    .selected-icon {
+        filter: brightness(0) invert(1) !important;
     }
 
     .glider {

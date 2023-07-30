@@ -5,30 +5,30 @@ import '../styles/home.css';
 import Image from '../components/image.js';
 
 // Images
-import Lloyd from '../images/lloyd.jpg';
+import Lloyd from '../images/photos/lloyd.jpg';
 
-import Pic1 from '../images/1.jpg';
-import Pic2 from '../images/2.jpg';
-import Pic3 from '../images/3.jpg';
-import Pic4 from '../images/4.jpg';
-import Pic5 from '../images/5.jpg';
-import Pic6 from '../images/6.jpg';
-import Pic7 from '../images/7.jpg';
-import Pic8 from '../images/8.jpg';
-import Pic9 from '../images/9.jpg';
-import Pic10 from '../images/10.jpg';
-import Pic11 from '../images/11.jpg';
-import Pic12 from '../images/12.jpg';
-import Pic13 from '../images/13.jpg';
-import Pic14 from '../images/14.jpg';
-import Pic15 from '../images/15.jpg';
-import Pic16 from '../images/16.jpg';
-import Pic17 from '../images/17.jpg';
-import Pic18 from '../images/18.jpg';
-import Pic19 from '../images/19.jpg';
+import Pic1 from '../images/photos/1.jpg';
+import Pic2 from '../images/photos/2.jpg';
+import Pic3 from '../images/photos/3.jpg';
+import Pic4 from '../images/photos/4.jpg';
+import Pic5 from '../images/photos/5.jpg';
+import Pic6 from '../images/photos/6.jpg';
+import Pic7 from '../images/photos/7.jpg';
+import Pic8 from '../images/photos/8.jpg';
+import Pic9 from '../images/photos/9.jpg';
+import Pic10 from '../images/photos/10.jpg';
+import Pic11 from '../images/photos/11.jpg';
+import Pic12 from '../images/photos/12.jpg';
+import Pic13 from '../images/photos/13.jpg';
+import Pic14 from '../images/photos/14.jpg';
+import Pic15 from '../images/photos/15.jpg';
+import Pic16 from '../images/photos/16.jpg';
+import Pic17 from '../images/photos/17.jpg';
+import Pic18 from '../images/photos/18.jpg';
+import Pic19 from '../images/photos/19.jpg';
 
-import Insta from '../images/Insta.png';
-import Twitter from '../images/Twitter.png';
+import Insta from '../images/logos/Insta.png';
+import Twitter from '../images/logos/Twitter.png';
 
 
 const Home = () => {  
@@ -165,7 +165,34 @@ const Home = () => {
             
             {/* Cinematography Container */}
             <div class="cinematography-container">
-
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/655186707" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/563294878" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe class="video" src="https://player.vimeo.com/video/390816444" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </section>

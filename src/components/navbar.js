@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../styles/nav.css'
 
 // Images
-import Logo from '../images/logo.png';
-import Insta from '../images/Insta.png';
-
+import Logo from '../images/logos/logo.png';
 
 class NavBar extends Component {
   
@@ -13,8 +11,6 @@ class NavBar extends Component {
     this.state = {
       isNavHidden: false,
       lastScrollY: 0,
-      selectedTab: 'radio-home',
-      isScrolling: false,
     };
   }
 
@@ -26,8 +22,6 @@ class NavBar extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-
-  
   handleScroll = () => {
 
     // Hide Nav with Scroll
@@ -55,27 +49,54 @@ class NavBar extends Component {
     const contactPos = fullHeight-svh*1.5-footer-safety;
 
     const glider = document.querySelector('.glider');
-    const instaIcon = document.getElementById('insta-icon');
+    const HomeIcon = document.querySelector('.home-icon');
+    const PhotoIcon = document.querySelector('.photo-icon');
+    const VideoIcon = document.querySelector('.video-icon');
+    const ContactIcon = document.querySelector('.contact-icon');
+
+    console.log(HomeIcon);
 
     if (isMobile && glider) {
       if (currentScrollY < photosPos) {
         glider.style.transform = 'translateX(-240%)';
-        instaIcon.style.filter = 'brightness(500%)';
+        HomeIcon.classList.add('selected-icon');
+    
+        // Remove the "selected-icon" class from other elements
+        PhotoIcon.classList.remove('selected-icon');
+        VideoIcon.classList.remove('selected-icon');
+        ContactIcon.classList.remove('selected-icon');
       } else if (currentScrollY < cinemaPos) {
-        glider.style.transform = 'translateX(-82.5%)';
+        glider.style.transform = 'translateX(-82%)';
+        PhotoIcon.classList.add('selected-icon');
+    
+        // Remove the "selected-icon" class from other elements
+        HomeIcon.classList.remove('selected-icon');
+        VideoIcon.classList.remove('selected-icon');
+        ContactIcon.classList.remove('selected-icon');
       } else if (currentScrollY < contactPos) {
-        glider.style.transform = 'translateX(77.5%)';
+        glider.style.transform = 'translateX(78%)';
+        VideoIcon.classList.add('selected-icon');
+    
+        // Remove the "selected-icon" class from other elements
+        HomeIcon.classList.remove('selected-icon');
+        PhotoIcon.classList.remove('selected-icon');
+        ContactIcon.classList.remove('selected-icon');
       } else {
         glider.style.transform = 'translateX(240%)';
+        ContactIcon.classList.add('selected-icon');
+    
+        // Remove the "selected-icon" class from other elements
+        HomeIcon.classList.remove('selected-icon');
+        PhotoIcon.classList.remove('selected-icon');
+        VideoIcon.classList.remove('selected-icon');
       }
-    };
+    }
+    
 
   };
 
   render() {
     const { isNavHidden } = this.state;
-    const screenWidth = window.innerWidth; // Is Mobile
-
 
     return (
       <nav id="navbar" class={"navbar" + (isNavHidden ? " hidden" : "")}>
@@ -85,10 +106,10 @@ class NavBar extends Component {
           </div>
         </a>
         <ul class="nav-list section-tabs">
-          <li><a id="insta-icon" class="option" href="#home" style={{ backgroundImage: `url(${Insta})` }}><span class="tab-text">Home</span></a></li>
-          <li><a id="photos-icon" class="option" href="#photography-section"><span class="tab-text">Photos</span></a></li>
-          <li><a id="video-icon" class="option" href="#cinematography-section"><span class="tab-text">Cinema</span></a></li>
-          <li><a id="contact-icon" class="option" href="#contact-section"><span class="tab-text">Contact</span></a></li>
+          <li><a id="home-icon" class="selected-icon home-icon option" href="#home"><span class="tab-text">Home</span></a></li>
+          <li><a id="photos-icon" class="photo-icon option" href="#photography-section"><span class="tab-text">Photos</span></a></li>
+          <li><a id="video-icon" class="video-icon option" href="#cinematography-section"><span class="tab-text">Cinema</span></a></li>
+          <li><a id="contact-icon" class="contact-icon option" href="#contact-section"><span class="tab-text">Contact</span></a></li>
         </ul>
         <span class="glider"></span>
       </nav>
