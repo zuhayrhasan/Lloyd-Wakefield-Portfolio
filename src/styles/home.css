@@ -118,19 +118,14 @@ h6 {
     font-size: 35px;
     font-weight: 700;
     color: var(--black);
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
 }
 
 .section-text:hover {
-    font-size: 35px;
+    font-size: 37.5px;
     font-weight: 700;
-    background: linear-gradient(120deg, var(--pink), var(--dark));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.sub-section-text {
-    font-size: 20px;
-    color: var(--darkgrey);
+    color: var(--pink);
 }
 
 .title-side {
@@ -229,6 +224,7 @@ h6 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 4px;
+    padding-bottom: 20px;
     background-image: linear-gradient(to bottom, var(--white), var(--light));
 }
 
@@ -270,6 +266,7 @@ h6 {
 .video {
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 .video-item:last-child {
@@ -368,6 +365,7 @@ h6 {
     background: var(--white);
     box-shadow:  15px 15px 45px var(--lightgrey),
                  -15px -15px 45px var(--white);
+    z-index: 1;
 }
 
 .contact-me-form {
@@ -379,7 +377,6 @@ h6 {
     margin-block-start: 5%;
 }
   
-
 .contact-me-form input,
 .contact-me-form textarea {
     font-family: 'Poppins', sans-serif;
@@ -422,11 +419,10 @@ h6 {
     max-width: 100%;
 }
 
-
 .contact-me-form textarea {
     height: 100px;
     min-height: 2.2rem;
-    max-height: 200px;
+    max-height: 150px;
     margin-bottom: 20px;
     padding-top: 0.5rem;
     overflow-x: hidden;
@@ -435,39 +431,93 @@ h6 {
 
 .contact-me-form button {
     position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 10px 20px;
-    border: none;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--pink);
+    background: transparent;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 1.5rem;
-    background: var(--pink);
-    background-size: 400%;
-    box-shadow: 0px 7.5px 0px var(--light);
-    color: var(--white);
-    transition: all 0.5s ease-in-out;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--pink);
 }
 
-.contact-me-form button-content {
-    position: relative;
-    z-index: 1;
-}
-  
 .contact-me-form button:hover {
-    background: var(--dark);
+    color: var(--white);
+    box-shadow: inset 0 -100px 0 0 var(--pink);
 }
 
-.foot {
-    height: 50svh;
-    background-color: var(--pink);
+.contact-me-form button:active {
+    transform: scale(0.9);
 }
 
-.gradient {
-    height: 100%;
+footer {
+    position: relative;
+    height: 60svh;
+    color: var(--black);
     background-image: linear-gradient(to bottom, var(--light), var(--pink));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h1 {
+    padding: 0;
+    margin: 0;
+}
+
+footer h6 {
+    font-size: 13px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
 }
   
+footer li {
+    margin: 0 10px;
+}
+  
+footer li a {
+    text-decoration: none;
+    color: var(--blacks);
+    padding: 0 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer li a:hover {
+    background-color: var(--pink);
+    color: var(--light);
+}
+
+.footer-text {
+    position: absolute;
+    top: 15svh;
+    text-align: center;
+}
+
+.footer-socials img {
+    width: 35px;
+    height: 35px;
+    padding: 0 25px;
+    filter: brightness(0);
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 5px;
+}
+
+.footer-socials img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
 
 @media (max-width: 768px) {
 
@@ -518,7 +568,20 @@ h6 {
         align-items: center;
         top: clamp(-6rem, -8.789rem + 16.2272vw, -1rem);
     }
-    
+
+    .section-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--black);
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+    } 
+
+    .section-text:hover {
+        font-size: 1.51rem;
+        font-weight: 700;
+        color: var(--pink);
+    }   
 
     .title-text {
         font-size: clamp(5rem, 1.6531rem + 19.4726vw, 11rem);
@@ -552,7 +615,7 @@ h6 {
     .video-container {
         display: inline-flex;
         padding-bottom: 2.5svh;
-        height: clamp(9.7rem, 0.4961rem + 53.5497vw, 26.2rem);
+        height: clamp(9.7rem, 0.8866rem + 51.2779vw, 25.5rem);
     }
 
     .video-item {
@@ -569,15 +632,21 @@ h6 {
     }
 
     .video-item:last-child {
-        margin-right: 0px !important; /* Remove margin-right from the last item */
+        margin-right: 0px !important;
     }
-      
 
+    .cinematography-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 70svh;
+    }
+ 
     .contact-container {
         display: flex;
         flex-direction: column;
         text-align: center;
-        height: 140svh;
+        height: 190svh;
         background-image: linear-gradient(to bottom, var(--white), var(--light));
     }
 
@@ -597,4 +666,68 @@ h6 {
         height: 45%;
     }
 
+
+    footer {
+        position: relative;
+        height: 60svh;
+        color: var(--black);
+        background-image: linear-gradient(to bottom, var(--light), var(--pink));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer h1 {
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer h6 {
+        font-size: 13px;
+    }
+    
+    footer ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        transform: scale(0.9);
+    }
+      
+    footer li {
+        margin: 0px -5px;
+    }
+      
+    footer li a {
+        text-decoration: none;
+        color: var(--blacks);
+        padding: 0 10px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    footer li a:hover {
+        background-color: var(--pink);
+        color: var(--light);
+    }
+    
+    .footer-text {
+        position: absolute;
+        top: 15svh;
+        text-align: center;
+    }
+    
+    .footer-socials img {
+        width: 20px;
+        height: 20px;
+        padding: 0 15px;
+        filter: brightness(0);
+        transition: all 0.3s ease-in-out;
+        padding-bottom: 5px;
+    }
+    
+    .footer-socials img:hover {
+        filter: none;
+        transform: scale(1.1);
+    }
 }

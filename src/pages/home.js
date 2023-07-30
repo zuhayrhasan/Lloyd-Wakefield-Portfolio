@@ -29,6 +29,7 @@ import Pic19 from '../images/photos/19.jpg';
 
 import Insta from '../images/logos/Insta.png';
 import Twitter from '../images/logos/Twitter.png';
+import Email from '../images/logos/Email.png';
 
 
 const Home = () => {  
@@ -168,28 +169,28 @@ const Home = () => {
               <div class="video-wrapper">
                 <div class="video-container">
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Harry Styles - As It Was BTS on Vimeo" class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/655186707" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="J Appiah - WYHG on Vimeo" class="video" src="https://player.vimeo.com/video/655186707" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Manc Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/563294878" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Flowers - A Fashion Film on Vimeo" class="video" src="https://player.vimeo.com/video/563294878" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Glas Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Phillip Plein NY on Vimeo" class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Phillip Plein 2020 on Vimeo" class="video" src="https://player.vimeo.com/video/555627555?h=c81a24d855" allowfullscreen></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe class="video" src="https://player.vimeo.com/video/390816444" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="Raw Sport X Richard Riakporhe on Vimeo" class="video" src="https://player.vimeo.com/video/390816444" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -224,11 +225,11 @@ const Home = () => {
                       <h5 class="darkgrey-text">Director & Photgrapher from the United Kingdom.</h5>
                       <h5 class="darkgrey-text">Editorial, commercial, & music videos.</h5>
                       <h4 class="darkgrey-text bold">Available anywhere.</h4>
-                      <div class="socials socials-hover">
-                        <a href="https://www.instagram.com/lloyddddddddddddddddd/" target="_blank">
+                      <div class="socials">
+                        <a href="https://www.instagram.com/lloyddddddddddddddddd/" target="_blank" rel="noreferrer">
                           <img src={Insta} alt="Lloyd's Instagram"></img>
                         </a>
-                        <a href="https://twitter.com/lloyddwakefield/" target="_blank">
+                        <a href="https://twitter.com/lloyddwakefield/" target="_blank" rel="noreferrer">
                           <img src={Twitter} alt="Lloyd's Twitter"></img>
                         </a>
                       </div>
@@ -270,23 +271,21 @@ const Home = () => {
                     <div class="underline-block"></div>
                   </h3>
 
-                  <form target="_blank" action="https://formsubmit.co/lloyd@gmail.com" method="POST" class="contact-me-form darkgrey-text">
+                  <form target="_blank" action="https://formsubmit.co/test@gmail.com" method="POST" class="contact-me-form darkgrey-text">
                     <label photos_section="to">To:</label>
                     <input type="text" id="to" name="to" value="LLoyd Wakefield" readOnly/>
 
                     <label photos_section="name">From:</label>
-                    <input type="text" id="from" name="name" placeholder="First Last" required/>
+                    <input type="text" id="from" name="name" pattern="[A-Za-z ]{2,}" placeholder="First Last" required />
 
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required/>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
 
                     <label photos_section="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Where did you learn to be so cool?" required></textarea>
+                    <textarea id="message" name="message" pattern=".{3,}" placeholder="Where did you learn to be so cool?" required></textarea>
 
-                    <button type="submit">
-                      <span class="button-content">
-                        Send Message
-                      </span>
+                    <button type="submit" class="email-lloyd">
+                      Send Message
                     </button>
 
                   </form>
@@ -300,8 +299,29 @@ const Home = () => {
         </main>
 
         {/* Footer */}
-        <footer class="foot">
-          <div class="gradient"></div>
+        <footer>
+          <div class="footer-text">
+            <h1>Lloyd Wakefield</h1>
+            <h5>Director & Photographer</h5>
+            <ul class="">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#photography-section">Photos</a></li>
+              <li><a href="#cinematography-section">Cinema</a></li>
+              <li><a href="#contact-section">Contact</a></li>
+            </ul>
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/lloyddddddddddddddddd/" target="_blank" rel="noreferrer">
+                <img src={Insta} alt="Lloyd's Instagram"></img>
+              </a>
+              <a href="https://twitter.com/lloyddwakefield/" target="_blank" rel="noreferrer">
+                <img src={Twitter} alt="Lloyd's Twitter"></img>
+              </a>
+              <a href="mailto:contact@lloydwakefield.com" target="_blank" rel="noreferrer">
+                <img src={Email} alt="Lloyd's Email"></img>
+              </a>
+            </div>
+            <h6>&copy; 2023 www.lloydwakefield.com All rights reserved. | Created by Zuhayr Hasan</h6>
+          </div>
         </footer>
       </>
     );

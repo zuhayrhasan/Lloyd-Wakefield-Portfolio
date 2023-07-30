@@ -26,9 +26,13 @@
     margin-right: 30px;
 }
 
+.nav-list {
+    margin-left: auto;
+}
+
 .nav-list .tab-text {
     display: inline-block;
-  }
+}
   
 .option {
     text-decoration: none;
