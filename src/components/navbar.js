@@ -54,8 +54,6 @@ class NavBar extends Component {
     const VideoIcon = document.querySelector('.video-icon');
     const ContactIcon = document.querySelector('.contact-icon');
 
-    console.log(HomeIcon);
-
     if (isMobile && glider) {
       if (currentScrollY < photosPos) {
         glider.style.transform = 'translateX(-240%)';

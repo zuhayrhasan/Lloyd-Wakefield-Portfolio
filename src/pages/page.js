@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/home.css';
 import '../styles/photos.css';
 import '../styles/cinema.css';
@@ -38,21 +38,42 @@ import Email from '../images/logos/Email.png';
 
 const Home = () => {  
 
-    window.addEventListener("load", function() {
-      // Get the .title-text element
-      const textBlock = document.querySelector(".text-block");
-      const imageBlock = document.querySelector(".image-block");
-      const text = document.querySelector(".title-text");
-      const subtext = document.querySelector(".subtitle-text");
-      const image = document.querySelector(".image-itself");
+  useEffect(() => {
+    // Trigger lazy loading for each .column-image element
+    const images = document.querySelectorAll('.column-image');
+    const lazyLoad = target => {
+      const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target.querySelector('img');
+            const src = img.getAttribute("data-lazy");
+            
+            img.setAttribute("src", src);
+            img.classList.add("show-lazy-image");
+            
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      io.observe(target);
+    };
 
-      // Add the 'loaded' class to trigger the transition
-      text.classList.add("fully-loaded");
-      subtext.classList.add("fully-loaded");
-      image.classList.add("fully-loaded");
-      textBlock.classList.add("text-block-loaded");
-      imageBlock.classList.add("image-block-loaded");
-    });
+    images.forEach(image => lazyLoad(image));
+
+    // Other code related to the title transition (if needed)
+    const textBlock = document.querySelector(".text-block");
+    const imageBlock = document.querySelector(".image-block");
+    const text = document.querySelector(".title-text");
+    const subtext = document.querySelector(".subtitle-text");
+    const image = document.querySelector(".image-itself");
+
+    text.classList.add("fully-loaded");
+    subtext.classList.add("fully-loaded");
+    image.classList.add("fully-loaded");
+    textBlock.classList.add("text-block-loaded");
+    imageBlock.classList.add("image-block-loaded");
+  }, []);
 
     return (
       <>
@@ -102,7 +123,6 @@ const Home = () => {
                 <Image person={"Malin"} occasion={"Lidingö"} imageSrc={Pic1} id={"1"} />
                 <Image person={"Harry Styles"} occasion={"Harryween"} imageSrc={Pic2} id={"2"} />
                 <Image person={"Kenzie"} occasion={"Manchester"} imageSrc={Pic3} id={"3"} />
-                
                 <Image person={"Jassiel"} occasion={"Contact"} imageSrc={Pic16} id={"16"} />
                 <Image person={"Harry Styles"} occasion={"Love On Tour"} imageSrc={Pic5} id={"5"} />
               </div>
@@ -152,28 +172,28 @@ const Home = () => {
               <div class="video-wrapper">
                 <div class="video-container">
                   <div class="video-item">
-                    <iframe title="Harry Styles - As It Was BTS on Vimeo" class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" allowfullscreen="true"></iframe>
+                    <iframe title="Harry Styles - As It Was BTS on Vimeo" class="video" src="https://player.vimeo.com/video/700910126?h=40557b56c8" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="J Appiah - WYHG on Vimeo" class="video" src="https://player.vimeo.com/video/655186707" allowfullscreen="true"></iframe>
+                    <iframe title="J Appiah - WYHG on Vimeo" class="video" src="https://player.vimeo.com/video/655186707" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Manc Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" allowfullscreen="true"></iframe>
+                    <iframe title="Manc Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698654542?h=0120ae70a9" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Flowers - A Fashion Film on Vimeo" class="video" src="https://player.vimeo.com/video/563294878" allowfullscreen="true"></iframe>
+                    <iframe title="Flowers - A Fashion Film on Vimeo" class="video" src="https://player.vimeo.com/video/563294878" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Glas Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" allowfullscreen="true"></iframe>
+                    <iframe title="Glas Nike on Vimeo" class="video" src="https://player.vimeo.com/video/698661180?h=4cf9d0ecef" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Phillip Plein NY on Vimeo" class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" allowfullscreen="true"></iframe>
+                    <iframe title="Phillip Plein NY on Vimeo" class="video" src="https://player.vimeo.com/video/698667563?h=613b053b7a" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Phillip Plein 2020 on Vimeo" class="video" src="https://player.vimeo.com/video/555627555?h=c81a24d855" allowfullscreen="true"></iframe>
+                    <iframe title="Phillip Plein 2020 on Vimeo" class="video" src="https://player.vimeo.com/video/555627555?h=c81a24d855" allowFullScreen="true"></iframe>
                   </div>
                   <div class="video-item">
-                    <iframe title="Raw Sport X Richard Riakporhe on Vimeo" class="video" src="https://player.vimeo.com/video/390816444" allowfullscreen="true"></iframe>
+                    <iframe title="Raw Sport X Richard Riakporhe on Vimeo" class="video" src="https://player.vimeo.com/video/390816444" allowFullScreen="true"></iframe>
                   </div>
                 </div>
               </div>
@@ -303,7 +323,7 @@ const Home = () => {
                 <img src={Email} alt="Lloyd's Email"></img>
               </a>
             </div>
-            <h6>&copy; 2023 www.lloydwakefield.com All rights reserved. | Created by Zuhayr Hasan</h6>
+            <h6>&copy; 2023 www.lloydwakefield.netlify.app All website rights reserved. | Created by Zuhayr Hasan</h6>
           </div>
         </footer>
       </>

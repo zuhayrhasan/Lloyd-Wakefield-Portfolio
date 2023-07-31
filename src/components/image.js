@@ -17,12 +17,12 @@ const Image = ({ person, occasion, imageSrc, id }) => {
 
   return (
     <>
-      <div className="column-image" onClick={handleImageClick}>
+      <div className="column-image not-loaded" onClick={handleImageClick}>
         <div className="blur">
           <div className="blur-person">{person}</div>
           <div className="blur-occasion">{occasion}</div>
         </div>
-        <img src={imageSrc} alt={`#${id}: ${person}, ${occasion}.`} />
+        <img data-lazy={imageSrc} alt={`#${id}: ${person}, ${occasion}.`} />
       </div>
 
       {showModal && (
